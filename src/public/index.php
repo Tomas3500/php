@@ -87,10 +87,12 @@ if ($numberOne == $numberTwo) {
 }
 //task9
 echo "<br/>";
-$randomNumber = 3;
+$randomNumber = rand(1, 100);
 if ($randomNumber % 3 == 0) {
     $a = $randomNumber;
     echo $a;
+} else {
+    echo 'число не кратно';
 }
 ?>
 </div>
