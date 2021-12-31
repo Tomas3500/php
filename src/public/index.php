@@ -12,9 +12,17 @@
 </head>
 
 <body style="margin: 0;">
-<!-- Add your site or application content here -->
+
+
 <main style="display: flex; justify-content:center; margin-top: 25px;">
     <!--    <img src="palmo.jpg" alt="">-->
+    <form name="feedback" method="POST" action="form.php" enctype="multipart/form-data">
+        <label>Ваше имя: <input type="text" name="name"></label>
+        <label>Ваше email: <input type="text" name="email"></label>
+        <label>Ваше Текст <input type="text" name="message"></label>
+        <input type="file" name="avatar">
+        <input type="submit" name="send" value="Отправить">
+    </form>
     <br>
     <?php
     echo 'Hello Palmo', "<br/>";
@@ -30,70 +38,135 @@
 <div style="display: flex; justify-content:center; margin-top: 25px class=" hom1
 ">
 <?php
-//home-1
-//task1
-$name = 'Aleksanrd';
-echo $name, "<br/>";
-//task2
-$a = 8;
-$b = 1;
-echo " " . $a + $b;
-echo " " . $a - $b;
-echo " " . $a * $b;
-echo " " . $a / $b;
-echo " " . $a % $b, "<br/>";
-//task3
-$number = 5;
-$result = $number ** 3;
-echo $result, "<br/>";
-//task4
-$age = 28;
-if ($age > 18 && $age < 60) {
-    echo "Вам ещё работать и работать", "<br/>";
-} elseif ($age < 18) {
-    echo "Вам ещё рано работать", "<br/>";
+$newStr = 'abc';
+$pos = strpos($newStr, 'abc');
+if ($pos === 0) {
+    echo str_replace('abc', 'www', $newStr);
 
 } else {
-    echo 'Пора на отдых', "<br/>";
+    echo $newStr . 'zzz';
 }
-//task6
-$dayNumber = 6;
-if ($dayNumber >= 1 && $dayNumber <= 5) {
-    echo "Это рабочий день";
 
-} elseif ($dayNumber >= 6 && $dayNumber <= 7) {
-    echo "Это выходной";
+//2
+echo "<br/>";
+$newStrL = 'hello';
+if (strlen($newStrL) > 10) {
+    echo substr($newStrL, 0, 6);
 } else {
-    echo 'Ошибка';
+    while (strlen($newStrL) < 12) {
+        $newStrL = $newStrL . 'o';
+    }
+    echo $newStrL;
 }
-//task7
-const DAYS_COUNT = 7;
-const MONTH_COUNT = 12;
-//define('DAYS_COUNT', 7);
-//define('MONTH_COUNT', 12);
+//3
 echo "<br/>";
-echo DAYS_COUNT, " " . MONTH_COUNT;
-//task8
+$strNumber = 'fdfd 12 fdf d12'; // 4
+$countN = 0;
+for ($x = 0; $x < strlen($strNumber); $x++) {
+    if (is_numeric($strNumber[$x])) {
+        $countN++;
+    }
+}
+echo $countN;
+//4
 echo "<br/>";
-$numberOne = 1;
-$numberTwo = 10;
+$strNewWord = 'word hi word hello palmo';
+echo str_replace('word', 'letter', $strNewWord);
+//5
+echo "<br/>";
+$strDelete = 'abc ___xxxxxxxxx__ he__x';
+echo str_replace('x', ' ', $strDelete);
+//6
+echo "<br/>";
+$strAbc = 'aba heee aba';
+echo substr_count($strAbc, 'aba');
+//7
+echo "<br/>";
+$newStrLastName = 'SMIRNOV';
 
-if ($numberOne == $numberTwo) {
-    $resSum = $numberOne + $numberTwo;
-    echo "Сумма: " . $resSum;
-} else {
-    $resSum = $numberOne - $numberTwo;
-    echo "Разница: " . $resSum;
-}
-//task9
+echo strtoupper(substr($newStrLastName, 0, 1)) . strtolower(substr($newStrLastName, 1));
+//8
 echo "<br/>";
-$randomNumber = rand(1, 100);
-if ($randomNumber % 3 == 0) {
-    $a = $randomNumber;
-    echo $a;
-} else {
-    echo 'число не кратно';
+
+$fullName = "Смирнов Александр Сергеевич";
+$newArr = explode(' ', $fullName);
+$symbolOne = mb_substr($newArr[1], 0, 1);
+$symbolTwo = mb_substr($newArr[2], 0, 1);
+echo $newArr[0] . ' ' . $symbolOne . '.', $symbolTwo . '.';
+
+//lesson-task Arr and cycles
+//1
+for ($i = 0; $i < 10; $i++) {
+//    echo ' ' . "You are welcome!" . "<br/>";
 }
+//2
+$sum = 0;
+for ($i = 1; $i <= 112; $i = $i + 3) {
+    $sum = $sum + $i;
+}
+//echo $sum;
+//3
+for ($i = 0; $i <= 10000; $i++) {
+    if ($i % 5 !== 0 && strpos($i, '3') === 0) {
+//        echo $i . "<br/>";
+    }
+}
+//4
+echo "<br/>";
+
+for ($i = 0; $i < 100; $i++) {
+    $i = rand();
+}
+echo '' . $i;
+
+//lasson-3 function
+echo "<br/>";
+function getNumber($numbers, $a)
+{
+    return (int)$numbers ** (int)$a;
+}
+
+echo getNumber(2, 3);
+echo "<br/>";
+//2
+
+function getDay($day)
+{
+    $arrDay = ['понидельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+    if ($day > 7) {
+        echo 'ошибка';
+    }
+    echo $arrDay[$day - 1];
+}
+
+echo getDay(7);
+//3
+function slug($strUrl)
+{
+    echo strtolower(str_replace(' ', '-', $strUrl));
+}
+
+echo slug('Hello world');
+echo "<br/>";
+//4
+$product = [
+    ['name' => 'телевизор', 'price' => '400', 'quantily' => 1],
+    ['name' => 'телефон', 'price' => '400', 'quantily' => 3],
+    ['name' => 'Кроссовки', 'price' => '400', 'quantily' => 2]
+];
+$sum = 0;
+function getSumBasket($product)
+{
+    $sum = 0;
+    foreach ($product as $item) {
+        $sum += ($item['quantily']);
+
+    }
+    echo $sum;
+}
+
+echo getSumBasket($product);
+
 ?>
 </div>
 <?php
