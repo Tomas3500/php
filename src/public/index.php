@@ -16,13 +16,13 @@
 
 <main style="display: flex; justify-content:center; margin-top: 25px;">
     <!--    <img src="palmo.jpg" alt="">-->
-    <form name="feedback" method="POST" action="form.php" enctype="multipart/form-data">
-        <label>Ваше имя: <input type="text" name="name"></label>
-        <label>Ваше email: <input type="text" name="email"></label>
-        <label>Ваше Текст <input type="text" name="message"></label>
-        <input type="file" name="avatar">
-        <input type="submit" name="send" value="Отправить">
-    </form>
+    <!--    <form name="feedback" method="POST" action="form.php" enctype="multipart/form-data">-->
+    <!--        <label>Ваше имя: <input type="text" name="name"></label>-->
+    <!--        <label>Ваше email: <input type="text" name="email"></label>-->
+    <!--        <label>Ваше Текст <input type="text" name="message"></label>-->
+    <!--        <input type="file" name="avatar">-->
+    <!--        <input type="submit" name="send" value="Отправить">-->
+    <!--    </form>-->
     <br>
     <?php
     echo 'Hello Palmo', "<br/>";
@@ -114,59 +114,92 @@ for ($i = 0; $i <= 10000; $i++) {
 //4
 echo "<br/>";
 
-for ($i = 0; $i < 100; $i++) {
-    $i = rand();
+$randArr = [];
+$i = 0;
+while ($i <= 2) {
+    $randNum = rand(0, 100);
+    if (!in_array($randNum, $randArr)) {
+        $randArr[] = $randNum;
+        $i++;
+    }
 }
-echo '' . $i;
+echo 'Рандомные числа' . "<br/>";
+echo $randArr[0] . "<br/>";
+echo $randArr[1] . "<br/>";
+echo $randArr[2] . "<br/>";
+//5
+echo "<br/>";
 
+for ($i = 111111; $i <= 999999; $i++) {
+    $strNumber = (string)$i;
+    $oneSum = $strNumber[0] + $strNumber[1] + $strNumber[2];
+    $twoSum = $strNumber[3] + $strNumber[4] + $strNumber[5];
+    if ($oneSum == $twoSum) {
+//        echo "<br/>" . $i;
+    }
+
+}
+//6
+//echo "<br/>";
+$os = ['hello', 'hi', 'yes', 'hi'];
+$os1 = array_count_values($os);
+foreach ($os1 as $key => $value) {
+    if ($value > 1) {
+        echo 'есть повторения';
+    }
+
+}
+//7
+echo "<br/>";
 //lasson-3 function
-echo "<br/>";
-function getNumber($numbers, $a)
-{
-    return (int)$numbers ** (int)$a;
-}
-
-echo getNumber(2, 3);
-echo "<br/>";
-//2
-
-function getDay($day)
-{
-    $arrDay = ['понидельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
-    if ($day > 7) {
-        echo 'ошибка';
-    }
-    echo $arrDay[$day - 1];
-}
-
-echo getDay(7);
-//3
-function slug($strUrl)
-{
-    echo strtolower(str_replace(' ', '-', $strUrl));
-}
-
-echo slug('Hello world');
-echo "<br/>";
-//4
-$product = [
-    ['name' => 'телевизор', 'price' => '400', 'quantily' => 1],
-    ['name' => 'телефон', 'price' => '400', 'quantily' => 3],
-    ['name' => 'Кроссовки', 'price' => '400', 'quantily' => 2]
-];
-$sum = 0;
-function getSumBasket($product)
-{
-    $sum = 0;
-    foreach ($product as $item) {
-        $sum += ($item['quantily']);
-
-    }
-    echo $sum;
-}
-
-echo getSumBasket($product);
-
+//echo "<br/>";
+//function getNumber($numbers, $a)
+//{
+//    return (int)$numbers ** (int)$a;
+//}
+//
+//echo getNumber(2, 3);
+//echo "<br/>";
+////2
+//
+//function getDay($day)
+//{
+//    $arrDay = ['понидельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+//    if ($day > 7) {
+//        echo 'ошибка';
+//    }
+//    echo $arrDay[$day - 1];
+//}
+//
+//echo getDay(7);
+////3
+//function slug($strUrl)
+//{
+//    echo strtolower(str_replace(' ', '-', $strUrl));
+//}
+//
+//echo slug('Hello world');
+//echo "<br/>";
+////4
+//$product = [
+//    ['name' => 'телевизор', 'price' => '400', 'quantily' => 1],
+//    ['name' => 'телефон', 'price' => '400', 'quantily' => 3],
+//    ['name' => 'Кроссовки', 'price' => '400', 'quantily' => 2]
+//];
+//$sum = 0;
+//function getSumBasket($product)
+//{
+//    $sum = 0;
+//    foreach ($product as $item) {
+//        $sum += ($item['quantily']);
+//
+//    }
+//    echo $sum;
+//}
+//
+//echo getSumBasket($product);
+//
+//
 ?>
 </div>
 <?php
