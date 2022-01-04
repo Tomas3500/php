@@ -111,9 +111,9 @@ for ($i = 0; $i <= 10000; $i++) {
 //        echo $i . "<br/>";
     }
 }
-//4
-echo "<br/>";
 
+echo "<br/>";
+//4
 $randArr = [];
 $i = 0;
 while ($i <= 2) {
@@ -130,27 +130,89 @@ echo $randArr[2] . "<br/>";
 //5
 echo "<br/>";
 
-for ($i = 111111; $i <= 999999; $i++) {
+$countOf = 0;
+$countAllTiker = 0;
+for ($i = 111111; $i <= 222222; $i++) {
     $strNumber = (string)$i;
     $oneSum = $strNumber[0] + $strNumber[1] + $strNumber[2];
     $twoSum = $strNumber[3] + $strNumber[4] + $strNumber[5];
-    if ($oneSum == $twoSum) {
-//        echo "<br/>" . $i;
+    $countAllTiker++;
+    if ($oneSum === $twoSum) {
+        $countOf++;
     }
 
 }
-//6
-//echo "<br/>";
-$os = ['hello', 'hi', 'yes', 'hi'];
-$os1 = array_count_values($os);
-foreach ($os1 as $key => $value) {
-    if ($value > 1) {
-        echo 'есть повторения';
-    }
+echo "Кол-во счастливых - $countOf их процент: " . round($countOf * 100 / $countAllTiker);
 
+//6
+echo "<br/>";
+$os = ['hello', 'hi', 'yes', 'hi'];
+$os1 = array_unique($os);
+if (count($os) > count($os1)) {
+    echo 'есть повторения';
+} else {
+    echo 'нет повторений';
 }
 //7
 echo "<br/>";
+$arrNumber = [1, 2, 4, 4, 2, 5];
+var_dump(array_unique($arrNumber));
+
+//8
+echo "<br/>";
+$arr = [1, 3, 5, 7];
+echo "<br/>";
+var_dump([$arr[0], $arr[3]] = [$arr[3], $arr[0]]);
+echo "<br/>";
+
+//9
+echo "<br/>";
+
+$a = [1, 2, 8, 20, 40];
+$d = [4, 6, 7, 18, 40];
+$newArr = array_merge($a, $d);
+sort($newArr);
+print_r($newArr);
+
+//10
+function translateArrDay($lang, $day)
+
+{
+    $arrDay = [
+        'ru' => ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'],
+        'en' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    ];
+
+    echo $arrDay[$lang][$day];
+
+}
+
+echo "<br/>";
+echo translateArrDay('ru', 0);
+echo "<br/>";
+echo translateArrDay('en', 2);
+//11
+$v = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+echo "<br/>";
+for ($i = 0; $i < count($v); $i++) {
+    if ($v[$i] % 3 == 0) {
+        echo $v[$i] . "<br/>";
+    } else {
+        echo $v[$i] . ",";
+    }
+}
+echo "<br/>";
+//12
+$b = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+$index = 2;
+$a = $b[0];
+$b[0] = $b[$index];
+$b[$index] = $a;
+
+echo $a . " ";
+var_dump($b);
+
+
 //lasson-3 function
 //echo "<br/>";
 //function getNumber($numbers, $a)
