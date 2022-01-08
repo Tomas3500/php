@@ -451,3 +451,13 @@
 2021/12/24 13:32:56 [notice] 1#1: start worker process 35
 2021/12/24 13:32:56 [notice] 1#1: start worker process 36
 2021/12/24 19:01:40 [error] 33#33: *476 client intended to send too large body: 1072436 bytes, client: 172.18.0.1, server: example.palmo, request: "POST /form.php HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/"
+2022/01/08 13:41:59 [notice] 1#1: using the "epoll" event method
+2022/01/08 13:41:59 [notice] 1#1: nginx/1.21.0
+2022/01/08 13:41:59 [notice] 1#1: built by gcc 10.2.1 20201203 (Alpine 10.2.1_pre1) 
+2022/01/08 13:41:59 [notice] 1#1: OS: Linux 5.10.60.1-microsoft-standard-WSL2
+2022/01/08 13:41:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/01/08 13:41:59 [notice] 1#1: start worker processes
+2022/01/08 13:41:59 [notice] 1#1: start worker process 32
+2022/01/08 13:41:59 [notice] 1#1: start worker process 33
+2022/01/08 13:41:59 [notice] 1#1: start worker process 34
+2022/01/08 13:41:59 [notice] 1#1: start worker process 35
