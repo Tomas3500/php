@@ -1,14 +1,34 @@
 <?php
-function showCity()
-{
-    $input = htmlspecialchars($_POST['city']);
-    if (isset($input) && $input !== '') {
-        print("Ваш город: " . trim($input));
-    } else {
-        echo 'Введите город';
+require './function.php';
+
+if (isset($_POST['action'])) {
+    $action = trim($_POST['action']);
+    switch ($action) {
+        case 1:
+        {
+            showCity();
+            break;
+        }
+        case 2:
+        {
+            showAge();
+            break;
+        }
+        case 3:
+        {
+            showCardProduct();
+            break;
+
+        }
+        case 4:
+        {
+            showTestResult();
+            break;
+
+        }
+        default:
+            echo 'NO';
     }
-}
+};
 
-;
 
-showCity();

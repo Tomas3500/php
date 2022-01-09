@@ -5,8 +5,8 @@ body {
 }
 
 .form form {
-    margin-top: 20px;
-    display: flex;
+    /*margin-top: 20px;*/
+    margin: 0 50px;
     justify-content: center;
     align-items: center;
 }
@@ -14,3 +14,8 @@ body {
 .form form label {
     margin-right: 10px;
 }
+
+/*.test form {*/
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*}*/

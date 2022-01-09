@@ -461,3 +461,135 @@
 2022/01/08 13:41:59 [notice] 1#1: start worker process 33
 2022/01/08 13:41:59 [notice] 1#1: start worker process 34
 2022/01/08 13:41:59 [notice] 1#1: start worker process 35
+2022/01/08 20:09:44 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/01/08 20:09:44 [notice] 33#33: gracefully shutting down
+2022/01/08 20:09:44 [notice] 34#34: gracefully shutting down
+2022/01/08 20:09:44 [notice] 35#35: gracefully shutting down
+2022/01/08 20:09:44 [notice] 33#33: exiting
+2022/01/08 20:09:44 [notice] 34#34: exiting
+2022/01/08 20:09:44 [notice] 35#35: exiting
+2022/01/08 20:09:44 [notice] 33#33: exit
+2022/01/08 20:09:44 [notice] 34#34: exit
+2022/01/08 20:09:44 [notice] 35#35: exit
+2022/01/08 20:09:44 [notice] 32#32: gracefully shutting down
+2022/01/08 20:09:44 [notice] 32#32: exiting
+2022/01/08 20:09:44 [notice] 32#32: exit
+2022/01/08 20:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/01/08 20:09:44 [notice] 1#1: worker process 34 exited with code 0
+2022/01/08 20:09:44 [notice] 1#1: worker process 35 exited with code 0
+2022/01/08 20:09:44 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/01/08 20:09:44 [notice] 1#1: worker process 32 exited with code 0
+2022/01/08 20:09:44 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:09:44 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/01/08 20:09:44 [notice] 1#1: worker process 33 exited with code 0
+2022/01/08 20:09:44 [notice] 1#1: exit
+2022/01/08 20:31:40 [notice] 1#1: using the "epoll" event method
+2022/01/08 20:31:40 [notice] 1#1: nginx/1.21.0
+2022/01/08 20:31:40 [notice] 1#1: built by gcc 10.2.1 20201203 (Alpine 10.2.1_pre1) 
+2022/01/08 20:31:40 [notice] 1#1: OS: Linux 5.10.60.1-microsoft-standard-WSL2
+2022/01/08 20:31:40 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/01/08 20:31:40 [notice] 1#1: start worker processes
+2022/01/08 20:31:40 [notice] 1#1: start worker process 33
+2022/01/08 20:31:40 [notice] 1#1: start worker process 34
+2022/01/08 20:31:40 [notice] 1#1: start worker process 35
+2022/01/08 20:31:40 [notice] 1#1: start worker process 36
+2022/01/08 20:34:38 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/01/08 20:34:38 [notice] 33#33: gracefully shutting down
+2022/01/08 20:34:38 [notice] 34#34: gracefully shutting down
+2022/01/08 20:34:38 [notice] 36#36: gracefully shutting down
+2022/01/08 20:34:38 [notice] 34#34: exiting
+2022/01/08 20:34:38 [notice] 33#33: exiting
+2022/01/08 20:34:38 [notice] 36#36: exiting
+2022/01/08 20:34:38 [notice] 33#33: exit
+2022/01/08 20:34:38 [notice] 34#34: exit
+2022/01/08 20:34:38 [notice] 36#36: exit
+2022/01/08 20:34:38 [notice] 35#35: gracefully shutting down
+2022/01/08 20:34:38 [notice] 35#35: exiting
+2022/01/08 20:34:38 [notice] 35#35: exit
+2022/01/08 20:34:38 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/01/08 20:34:38 [notice] 1#1: worker process 34 exited with code 0
+2022/01/08 20:34:38 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:34:38 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/01/08 20:34:38 [notice] 1#1: worker process 35 exited with code 0
+2022/01/08 20:34:38 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:34:38 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/01/08 20:34:38 [notice] 1#1: worker process 33 exited with code 0
+2022/01/08 20:34:38 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:34:39 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2022/01/08 20:34:39 [notice] 1#1: worker process 36 exited with code 0
+2022/01/08 20:34:39 [notice] 1#1: exit
+2022/01/08 20:48:15 [notice] 1#1: using the "epoll" event method
+2022/01/08 20:48:15 [notice] 1#1: nginx/1.21.0
+2022/01/08 20:48:15 [notice] 1#1: built by gcc 10.2.1 20201203 (Alpine 10.2.1_pre1) 
+2022/01/08 20:48:15 [notice] 1#1: OS: Linux 5.10.60.1-microsoft-standard-WSL2
+2022/01/08 20:48:15 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/01/08 20:48:15 [notice] 1#1: start worker processes
+2022/01/08 20:48:15 [notice] 1#1: start worker process 32
+2022/01/08 20:48:15 [notice] 1#1: start worker process 33
+2022/01/08 20:48:15 [notice] 1#1: start worker process 34
+2022/01/08 20:48:15 [notice] 1#1: start worker process 35
+2022/01/08 20:53:34 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/01/08 20:53:34 [notice] 32#32: gracefully shutting down
+2022/01/08 20:53:34 [notice] 32#32: exiting
+2022/01/08 20:53:34 [notice] 32#32: exit
+2022/01/08 20:53:34 [notice] 34#34: gracefully shutting down
+2022/01/08 20:53:34 [notice] 34#34: exiting
+2022/01/08 20:53:34 [notice] 34#34: exit
+2022/01/08 20:53:34 [notice] 35#35: gracefully shutting down
+2022/01/08 20:53:34 [notice] 35#35: exiting
+2022/01/08 20:53:34 [notice] 35#35: exit
+2022/01/08 20:53:34 [notice] 33#33: gracefully shutting down
+2022/01/08 20:53:34 [notice] 33#33: exiting
+2022/01/08 20:53:34 [notice] 33#33: exit
+2022/01/08 20:53:34 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/01/08 20:53:34 [notice] 1#1: worker process 32 exited with code 0
+2022/01/08 20:53:34 [notice] 1#1: worker process 34 exited with code 0
+2022/01/08 20:53:34 [notice] 1#1: worker process 35 exited with code 0
+2022/01/08 20:53:34 [notice] 1#1: signal 29 (SIGIO) received
+2022/01/08 20:53:34 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/01/08 20:53:34 [notice] 1#1: worker process 33 exited with code 0
+2022/01/08 20:53:34 [notice] 1#1: exit
+2022/01/08 20:58:18 [notice] 1#1: using the "epoll" event method
+2022/01/08 20:58:18 [notice] 1#1: nginx/1.21.0
+2022/01/08 20:58:18 [notice] 1#1: built by gcc 10.2.1 20201203 (Alpine 10.2.1_pre1) 
+2022/01/08 20:58:18 [notice] 1#1: OS: Linux 5.10.60.1-microsoft-standard-WSL2
+2022/01/08 20:58:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/01/08 20:58:18 [notice] 1#1: start worker processes
+2022/01/08 20:58:18 [notice] 1#1: start worker process 32
+2022/01/08 20:58:18 [notice] 1#1: start worker process 33
+2022/01/08 20:58:18 [notice] 1#1: start worker process 34
+2022/01/08 20:58:18 [notice] 1#1: start worker process 35
+2022/01/08 21:02:57 [error] 33#33: *53 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:05:06 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:05:42 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:05:45 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:06:39 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:07:12 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:07:15 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:07:41 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:08:11 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:08:31 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:09:00 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:09:33 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:09:42 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:10:04 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:10:20 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:10:27 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:10:36 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:12:01 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:12:21 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:12:31 [error] 33#33: *61 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:13:45 [error] 33#33: *137 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:13:48 [error] 33#33: *137 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:14:10 [error] 33#33: *137 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:14:14 [error] 33#33: *137 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:15:30 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:15:33 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:16:03 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:18:35 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:18:51 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:19:07 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:19:59 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:20:16 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
+2022/01/08 21:20:32 [error] 33#33: *148 directory index of "/var/www/src/public/uploads/" is forbidden, client: 172.18.0.1, server: example.palmo, request: "GET /uploads/ HTTP/1.1", host: "example.palmo", referrer: "http://example.palmo/form.php"
