@@ -15,8 +15,8 @@
         <form name="feedback" method="POST" action="login.php" enctype="multipart/form-data">
             <h1>Регистрация</h1>
             <hr>
-            <label>Имя пользователя<input type="text" name="user"></label>
-            <label>Пароль<input type="password" name="password"></label>
+            <label>Имя пользователя<input type="text" name="user" value="<?php echo isset($_COOKIE['user']) ? $_COOKIE['user'] : ''?>"></label>
+            <label>Пароль<input type="password" name="password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : ''?>"></label>
             <input type="hidden" name="action" value="1">
             <input type="submit" name="send" value="Отправить">
         </form>
