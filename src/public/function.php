@@ -1,5 +1,4 @@
 <?php
-//require './main.js';
 function showCity()
 {
     $input = trim(htmlspecialchars($_POST['city']));

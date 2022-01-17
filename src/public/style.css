@@ -31,3 +31,27 @@ form label{
 .error{
     color: red;
 }
+
+.btn{
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.form {
+    margin: 10px auto;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+.regist{
+    border: 1px solid forestgreen;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 500px;
+}
