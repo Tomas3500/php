@@ -12,14 +12,19 @@
 <main>
     <div class="regist">
         <h1>Войти на сайт</h1>
-        <form name="regist" action="form.php" method="post">
+        <form name="logIn" action="form.php" method="post">
             <p>
-                <label>Логин:<input type="text" name="login">
+                <label>Логин:<input type="text" name="loginUser">
                     <span class="error"></span>
                 </label>
             </p>
             <p>
-                <label>Пароль:<input type="password" name="password">
+                <label>Пароль:<input type="password" name="passwordUser">
+                    <span class="error"></span>
+                </label>
+            </p>
+            <p>
+                <label><input type="submit" value="Войти" name="btn_login">
                     <span class="error"></span>
                 </label>
             </p>

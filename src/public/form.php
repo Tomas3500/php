@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './function.php';
 
 if (isset($_POST['action'])) {
@@ -39,16 +40,21 @@ if (isset($_POST['action'])) {
 //    $errorPassword => 'Поле не может быть пустым',
 //    $errorPhone => 'Поле не может быть пустым',
 //];
-
+//
 $user = '';
 $login = '';
 $password = '';
 $phone = '';
-
-function f1()
-
+function validFormRegistUser()
 {
+    $user = '';
+    $login = '';
+    $password = '';
+    $phone = '';
+
     $count = 0;
+
+
     if (isset($_POST['user'])) {
         $user = trim(htmlspecialchars($_POST['user']));
         setcookie('userName', $user);
@@ -95,13 +101,30 @@ function f1()
         }
 
     }
-    if($count){
+    if ($count) {
         header('Location: http://example.palmo/registUser.php');
     }
-    else{
+    else {
+
+        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['login'] = $_POST['login'];
+        $_SESSION['password'] = $_POST['password'];
+        $_SESSION['phone'] = $_POST['phone'];
         header('Location: http://example.palmo/home.php');
+    }
+
+}
+
+
+//authorization
+function authorizationUser()
+{
+    if (isset($_POST['logIn'])) {
+        if (isset($_SESSION['login'])) {
+            echo 'good';
+        }
     }
 }
 
-f1();
-
+authorizationUser();
+validFormRegistUser();
