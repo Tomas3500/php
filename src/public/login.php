@@ -15,12 +15,25 @@
         <form name="logIn" action="form.php" method="post">
             <p>
                 <label>Логин:<input type="text" name="loginUser">
-                    <span class="error"></span>
+                    <span class="error">
+                            <?php
+                            if (isset($_COOKIE['login_undefined'])) {
+                                echo $_COOKIE['login_undefined'];
+                            }
+
+                            ?>
+                    </span>
                 </label>
             </p>
             <p>
                 <label>Пароль:<input type="password" name="passwordUser">
-                    <span class="error"></span>
+                    <span class="error">
+                           <?php
+                           if (isset($_COOKIE['login_undefined'])) {
+                               echo $_COOKIE['login_undefined'];
+                           }
+                           ?>
+                    </span>
                 </label>
             </p>
             <p>
@@ -28,6 +41,7 @@
                     <span class="error"></span>
                 </label>
             </p>
+            <input type="hidden" name="type" value="login">
         </form>
     </div>
 </main>

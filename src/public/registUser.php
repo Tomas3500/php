@@ -65,6 +65,7 @@
             <p>
                 <input type="submit" name="btn" value="Зарегистрироваться">
             </p>
+            <input type="hidden" name="type" value="registration">
         </form>
     </div>
 </main>
