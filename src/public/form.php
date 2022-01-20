@@ -33,27 +33,13 @@ if (isset($_POST['action'])) {
 };
 
 
-//valid-form-registNewUser;
-//$arrErrors = [
-//    $errorUser => 'Некорректное имя пользователя',
-//    $errorLogin => 'Некорректный логин',
-//    $errorPassword => 'Поле не может быть пустым',
-//    $errorPhone => 'Поле не может быть пустым',
-//];
-//
-$user = '';
-$login = '';
-$password = '';
-$phone = '';
 function validFormRegistUser()
 {
     $user = '';
     $login = '';
     $password = '';
     $phone = '';
-
     $count = 0;
-
 
     if (isset($_POST['user'])) {
         $user = trim(htmlspecialchars($_POST['user']));
@@ -103,26 +89,28 @@ function validFormRegistUser()
     }
     if ($count) {
         header('Location: http://example.palmo/registUser.php');
-    }
-    else {
+    } else {
 
-        $_SESSION['user'] = $_POST['user'];
-        $_SESSION['login'] = $_POST['login'];
-        $_SESSION['password'] = $_POST['password'];
-        $_SESSION['phone'] = $_POST['phone'];
+        $_SESSION['user'] = $user;
+        $_SESSION['login'] = $login;
+        $_SESSION['password'] = $password;
+        $_SESSION['phone'] = $phone;
         header('Location: http://example.palmo/home.php');
     }
-
 }
 
 
 //authorization
 function authorizationUser()
 {
-    if (isset($_POST['logIn'])) {
-        if (isset($_SESSION['login'])) {
-            echo 'good';
+    if ($_SESSION['login']) {
+        if ($_SESSION['login'] == $_POST['loginUser'] && $_SESSION['password'] == $_POST['passwordUser']) {
+            header('Location: http://example.palmo/home.php');
+        } else {
+            header('Location: http://example.palmo/login.php');
         }
+    } else {
+        header('Location: http://example.palmo/login.php');
     }
 }
 
