@@ -22,7 +22,8 @@ function sortArrFructs()
     foreach ($arrNew as $item) {
         $str .= $item . ' ';
     }
-    echo $str;
+    fwrite($file,$str);
+    fclose($file);
 
 
 }
