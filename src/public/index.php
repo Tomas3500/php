@@ -1,21 +1,29 @@
 <?php
+//Home work
 function creatFile()
 {
-    $fileText = fopen('text.txt', 'w+');
-    fwrite($fileText, 'Hello Palmo');
-    $readFile = file_get_contents('text.txt');
+    $fileText = fopen('fructs.txt', 'w+');
+    $arrFructs = ['apple', 'banana', 'cherry', 'lime', 'kiwi', 'mango', 'melon', 'avocado', 'grapefruit', 'lemon'];
+    $out = '';
+    foreach ($arrFructs as $item) {
+        $out .= $item . " ";
+    }
+    fwrite($fileText, $out);
     fclose($fileText);
-    $size = stat('text.txt');
-    $fileTwo = fopen('text2.txt', 'w+');
-    unlink('text2.txt');
+}
 
-    echo $readFile;
-    echo "<br/>";
-    echo ' размер файла в байтах ' . $size['size'];
-    echo "<br/>";
-    echo ' размер файла в мегабайтах ' . $size['size'] / 1000;
-    echo "<br/>";
-    echo ' размер файла в гигабайтах ' . $size['size'] / 10000;
+function sortArrFructs()
+{
+    $file = fopen('fructs.txt', 'r+');
+    $readFile = file_get_contents('fructs.txt');
+    $arrNew = explode(' ', $readFile);
+    sort($arrNew);
+    $str = '';
+    foreach ($arrNew as $item) {
+        $str .= $item . ' ';
+    }
+    echo $str;
+
 
 }
 
@@ -32,7 +40,8 @@ function creatFile()
 <body>
 <div class="out">
     <?php
-    creatFile();
+    //    creatFile();
+    sortArrFructs();
     ?>
 </div>
 </body>
