@@ -1,10 +1,3 @@
-<?php
-include 'News.php';
-$object = new  News();
-$object->validForm();
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,11 +5,12 @@ $object->validForm();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/style.css">
     <title>addNew</title>
 </head>
 <body>
 <div class="form-new">
-    <form action="addNews.php" method="post" name="addNew" enctype="multipart/form-data">
+    <form action="../action/createNews.php" method="post" name="addNew" enctype="multipart/form-data">
         <p>
             <lable>Название новости:<input type="text" name="nameNews"
                                            value="<?php echo isset($_COOKIE['nameNews']) ? $_COOKIE['nameNews'] : '' ?>">
@@ -45,12 +39,9 @@ $object->validForm();
         </p>
         <p>
             <lable>Дата создания новости:<input type="date" name="dataNews"</lable>
-            <span class="currentDate">
+            <span class="error">
                  <?php
-                 if (isset($_COOKIE['today'])){
-                     echo $_COOKIE['today'];
-
-                 }
+                 if (isset($_COOKIE['today'])) echo $_COOKIE['today'];
                  ?>
             </span>
         </p>
@@ -76,7 +67,9 @@ $object->validForm();
         </div>
         <p>
 
-            <lable>Автор новости:<input type="text[]" name="authorNews" value="<?php echo isset($_COOKIE['authorNews']) ? $_COOKIE['authorNews'] : '' ?>"></lable>
+            <lable>Автор новости:<input type="text[]" name="authorNews"
+                                        value="<?php echo isset($_COOKIE['authorNews']) ? $_COOKIE['authorNews'] : '' ?>">
+            </lable>
             <?php
             if (isset($_COOKIE['error_author'])) {
                 echo $_COOKIE['error_author'];
@@ -85,6 +78,15 @@ $object->validForm();
         </p>
         <p>
             <lable>Загрузить фото: <input type="file" name="uploadFile"></lable>
+            <span class="error-file">
+                <?php
+                if (isset($_COOKIE['error_file'])) {
+                    echo $_COOKIE['error_file'];
+                } else {
+                    echo $_COOKIE['error_bigFile'];
+                }
+                ?>
+            </span>
         </p>
         <p>
             <lable><input type="submit" name="btn" value="Добавить"></lable>
