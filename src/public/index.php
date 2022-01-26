@@ -1,5 +1,4 @@
 <?php
-//Home work
 function creatFile()
 {
     $fileText = fopen('fructs.txt', 'w+');
@@ -8,7 +7,7 @@ function creatFile()
     foreach ($arrFructs as $item) {
         $out .= $item . " ";
     }
-    fwrite($fileText, $out);
+    fwrite($fileText, $out . PHP_EOL);
     fclose($fileText);
 }
 
@@ -22,11 +21,28 @@ function sortArrFructs()
     foreach ($arrNew as $item) {
         $str .= $item . ' ';
     }
-    fwrite($file,$str);
+    fwrite($file, $str . PHP_EOL);
     fclose($file);
 
 
 }
+
+function createDirectorys($path)
+{
+    if (is_dir('test')) {
+        $scan = scandir('test');
+        foreach ($scan as $file) {
+            if ($file != '.' || $file != '..') {
+                if (stat($path . '/' . $file)['size'] > 10000) {
+                    unlink($path . '/' . $file);
+                }
+
+            }
+        }
+        print_r($scan);
+    }
+}
+
 
 ?>
 <!doctype html>
@@ -41,9 +57,34 @@ function sortArrFructs()
 <body>
 <div class="out">
     <?php
-    //    creatFile();
+    creatFile();
     sortArrFructs();
+    createDirectorys('test');
     ?>
+    <form action="file.php" name="fileLong" method="post" enctype="multipart/form-data">
+        <p>
+            <lable>Загрузить файл<input type="file" name="file"></lable>
+        </p>
+        <p>
+            <lable><input type="submit" name="btn" value="Отправит"></lable>
+        </p>
+    </form>
+    <br>
+    <h3>Данные пользователя</h3>
+    <form action="users.php" name="users" method="post" enctype="multipart/form-data">
+        <p>
+            <lable>Name<input type="text" name="nameUsers"></lable>
+        </p>
+        <p>
+            <lable>Last Name<input type="text" name="lastUsers"></lable>
+        </p>
+        <p>
+            <lable>Age<input type="text" name="ageUsers"></lable>
+        </p
+        <p>
+            <lable><input type="submit" name="btn" value="Отправит"></lable>
+        </p>
+    </form>
 </div>
 </body>
 </html>
