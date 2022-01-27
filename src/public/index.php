@@ -1,115 +1,42 @@
 <?php
-session_start();
-$error = "";
-if (isset($_POST['btn'])) {
-    $user = trim(htmlspecialchars($_POST['user']));
-    $login = trim(htmlspecialchars($_POST['login']));
-    $password = trim(htmlspecialchars($_POST['password']));
-    $phone = trim(htmlspecialchars($_POST['phone']));
-    setcookie('user', $user);
-    setcookie('login', $login);
-    setcookie('phone', $phone);
-    if ($user == "") {
-        $error = 'заполните поле';
-    } elseif ($login == "") {
-        $error = 'заполните поле';
-
-    } elseif (strlen($phone) < 10 || $phone == "") {
-        $error = 'заполните поле';
-    }
-}
-
-
+require 'Figure.php';
+require 'Circle.php';
+require 'Square.php';
+require 'Triangle.php';
 ?>
-    <!doctype html>
-    <html class="no-js" lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title>Palmo Helloe world</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
-        <meta name="theme-color" content="#fafafa">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <main>
-        <div class="form">
-            <form name="feedback" method="POST" action="index.php" enctype="multipart/form-data">
-                <h1>Task 1</h1>
-                <hr>
-                <?php
-                if (isset($_POST['reg'])) {
-                    $reg = $_POST['reg'];
-                    $_SESSION['reg'] = $reg;
-                    if (isset($_SESSION['reg'])) {
-                        echo "<a href='home.php'> http://example.palmo/</a>";
-                    }
-
-                } else {
-                    echo "<input type='submit' name='reg' value='Регистрация'> ";
-                    echo "<input type='submit' name='author' value='Авторизация'>";
-                }
-                ?>
-            </form>
-        </div>
-        <hr>
-        <div class="author">
-            <form name="feedback" method="POST" action="/" enctype="multipart/form-data">
-                <h1>Регистрация</h1>
-                <hr>
-                <div class="input_form">
-                    <div class="item">
-                        <label>Имя пользователя:<input type="text" name="user"
-                                                       value="<?php echo isset($_COOKIE['user']) ? $_COOKIE['user'] : '' ?>">
-                        </label>
-                        <span class="error">
-                            <?php
-                            echo $error;
-                            ?>
-                        </span>
-                    </div>
-                    <div class="item">
-                        <label>Логин:<input type="text" name="login"
-                                            value="<?php echo isset($_COOKIE['login']) ? $_COOKIE['login'] : '' ?>"></label>
-                        <span class="error">
-                              <?php
-                              echo $error;
-                              ?>
-                        </span>
-                    </div>
-                    <div class="item">
-                        <label>Пароль:<input type="password" name="password"></label>
-                        <span class="error">
-                              <?php
-                              echo $error;
-                              ?>
-                        </span>
-                    </div>
-                    <div class="item">
-                        <label>Номер телефона:<input type="text" name="phone"
-                                                     value="<?php echo isset($_COOKIE['phone']) ? $_COOKIE['phone'] : '' ?>"></label>
-                        <span class="error">
-                              <?php
-                              echo $error;
-                              ?>
-                        </span>
-                    </div>
-                    <div class="item">
-                        <input class="btn" type="submit" name="btn" value="Войти">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </main>
-    <div style="display: flex; justify-content:center; margin-top: 25px class=" hom1
-    ">
-
-    </div>
-
-    <!--<script src="./main.js"></script>-->
-    </body>
-    </html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 <?php
 
-//phpinfo();
+$odjCircle = new Circle(3.14, 5);
+$odjSquare = new Square(4);
+$odjectTriangle = new Triangle(10, 20, 5);
+//Circle
+echo "</br>";
+$odjCircle->getTypeFigure();
+echo $odjCircle->getSqura();
+echo $odjCircle->getPerimeter();
+//Square
+echo "</br>";
+$odjSquare->getTypeFigure();
+echo $odjSquare->getSqura();
+echo $odjSquare->getPerimeter();
+//Triangle
+echo "</br>";
+$odjectTriangle->getTypeFigure();
+echo $odjectTriangle->getSqura();
+echo $odjectTriangle->getPerimeter();
+
+?>
+
+
+</body>
+</html>
