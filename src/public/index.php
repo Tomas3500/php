@@ -18,7 +18,7 @@ require 'Triangle.php';
 
 $odjCircle = new Circle(3.14, 5);
 $odjSquare = new Square(4);
-$odjectTriangle = new Triangle(10, 20, 5);
+$odjectTriangle = new Triangle(20, 20, 20);
 //Circle
 echo "</br>";
 $odjCircle->getTypeFigure();
