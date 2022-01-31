@@ -14,22 +14,23 @@ class Triangle extends Figure
 
     public function getTypeFigure()
     {
+
         echo 'Фигура: ' . $this->type;
         // TODO: Implement getTypeFigure() method.
     }
 
     public function getSqura()
     {
-//        $this->getPerimeter();
+        $this->getPerimeter();
         $result = $this->p * (($this->p - $this->a) * ($this->p - $this->b) * ($this->p - $this->c));
-        return ' Площадь: ' . sqrt($result);
+        return ' Площадь: ' . round(sqrt($result),2);
         // TODO: Implement getSqura() method.
     }
 
     public function getPerimeter()
     {
-        $p = ($this->a + $this->b + $this->c) / 2;
-        return ' Периметр: ' . $p;
+        $this->p = ($this->a + $this->b + $this->c) / 2;
+        return ' Периметр: ' . $this->p;
         // TODO: Implement getPerimeter() method.
     }
 }
