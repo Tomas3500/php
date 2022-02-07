@@ -14,7 +14,7 @@ echo 'Вы зарегистрировались'
 <main>
     <div class="author">
         <h1>Авторизация</h1>
-        <form name="author" action="../action/authorization.php" method="post" enctype="multipart/form-data">
+        <form name="author" action="/action/authorization.php" method="post" enctype="multipart/form-data">
             <label>Логин:<input type="text" name="loginIn">
                 <span class="error">
                                <?php

@@ -40,7 +40,7 @@
 <main>
     <div class="regist">
         <h1>Регистрация пользователя:</h1>
-        <form name="regist" action="./action/creatRegistUser.php" method="post" enctype="multipart/form-data">
+        <form name="regist" action="/action/creatRegistUser.php" method="post" enctype="multipart/form-data">
             <label>Логин:<input type="text" name="login"
                                 value="<?php echo isset($_COOKIE['login']) ? $_COOKIE['login'] : '' ?>">
                 <span class="error">

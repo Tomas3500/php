@@ -21,7 +21,7 @@ class Registration extends ValidatorUserForm implements RegistrationInterface
                 $this->errorCount++;
                 setcookie('error_login', 'введите логин', 0, '/');
             } else {
-                setcookie('error_login', '', time() - 3600);
+                setcookie('error_login', '', time() - 3600, '/');
 
                 return true;
             }
@@ -56,7 +56,7 @@ class Registration extends ValidatorUserForm implements RegistrationInterface
     {
         $password = trim(htmlspecialchars($this->password));
         if (isset($password)) {
-            if ($password === '' || preg_match('~[^A-Z0-9_]~', $password)) {
+            if (!preg_match('~\S*(?=\S{5,10})(?=\S*[A-Z])(?=\S*[\d])\S*$~',$password)) {
                 $this->errorCount++;
                 setcookie('error_password', 'введите корректно пароль', 0, '/');
             } else {
@@ -94,14 +94,13 @@ class Registration extends ValidatorUserForm implements RegistrationInterface
 
     public function registUser()
     {
-        if ($this->validLogin() && $this->validEmail() && $this->validPassword() && $this->validAvatar()) {
+        if (!$this->validLogin() || !$this->validEmail() || !$this->validPassword() || !$this->validAvatar()) {
+            header('Location: http://example.palmo/index.php');
+        } else {
             $_SESSION['login'] = $this->login;
             $_SESSION['password'] = $this->password;
             header('Location: http://example.palmo/view/autherUser.php');
-        } else {
-            header('Location: http://example.palmo/index.php');
         }
-
 
     }
 
